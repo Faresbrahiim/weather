@@ -1,0 +1,136 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url(Earth_from_Space-modified.jpg); /* Background image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.weather-container {
+    background: linear-gradient(to top, gray, #62c1e5);
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.weather-container h1 {
+    margin-bottom: 10px;
+    color: black;
+}
+
+#city-input {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #90caf9;
+    border-radius: 20px;
+    font-size: 16px;
+}
+
+.current-weather h2 {
+    margin: 10px 0;
+    font-size: 1.8em;
+}
+
+.current-weather #date {
+    color: #555;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.weather-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#weather-icon {
+    width: 80px;
+    height: 80px;
+    margin-right: 15px;
+}
+
+#temp {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 3.5em;
+    margin: 0;
+    color: #ff8f00;
+}
+
+#description,
+#wind,
+#humidity {
+    margin: 5px 0;
+    font-size: 1em;
+    color: #555;
+}
+
+/* Forecast Section */
+.forecast {
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.forecast h3 {
+    margin-bottom: 10px;
+    color: black;
+}
+
+/* Scrollable Weekly Forecast with Styled Scrollbar */
+.week {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    padding-bottom: 10px;
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: #62c1e5 transparent; /* Firefox */
+    border-radius: 5px;
+}
+
+/* Chrome, Edge, Safari Scrollbar */
+.week::-webkit-scrollbar {
+    height: 8px; /* Adjust thickness */
+}
+
+.week::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Light gray background */
+    border-radius: 10px;
+}
+
+.week::-webkit-scrollbar-thumb {
+    background: #62c1e5; /* Blue scrollbar */
+    border-radius: 10px;
+}
+
+.week::-webkit-scrollbar-thumb:hover {
+    background: #4097b6; /* Darker blue on hover */
+}
+
+/* Forecast Card Styles */
+.forecast-card {
+    background: #90caf9;
+    color: black;
+    padding: 10px;
+    min-width: 120px;
+    border-radius: 8px;
+    text-align: center;
+    flex-shrink: 0; /* Prevent shrinking */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+}
+
+.forecast-card:hover {
+    transform: scale(1.05);
+}
+
+.forecast-card p {
+    margin: 5px 0;
+    font-size: 14px;
+}
