@@ -1,32 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Weather App</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherNow | Live Forecasts</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="weather-container">
-    <h1>Weather App</h1>
-    <input type="text" id="city-input" placeholder="Enter city name" />
-    <p id="notFound" style="color: red;"></p>
-    <div class="current-weather">
-      <h2 id="city-name">City Name</h2>
-      <p id="date">Date</p>
-      <div class="weather-main">
-        <img id="weather-icon" src="cloudy.png" alt="Weather Icon" />
-        <p id="temp">Temperature</p>
-      </div>
-      <p id="description">Weather Description</p>
-      <p id="wind">Wind: -- m/s</p>
-      <p id="humidity">Humidity: --%</p>
+    <div class="app-container">
+        <div class="glass-panel">
+            <div class="app-header">
+                <div class="logo">
+                    <i class="fas fa-cloud-sun"></i>
+                    <h1>WeatherNow</h1>
+                </div>
+                <div class="search-box">
+                    <input type="text" id="city-input" placeholder="Search for a city...">
+                    <button class="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div id="notFound" class="error-message"></div>
+
+            <div class="main-content">
+                <div class="current-weather-card">
+                    <div class="current-weather-header">
+                        <div class="location-info">
+                            <h2 id="city-name">--</h2>
+                            <p id="date">--</p>
+                        </div>
+                    </div>
+                    
+                    <div class="weather-display">
+                        <div class="weather-icon">
+                            <i class="fas fa-cloud-sun fa-5x"></i>
+                        </div>
+                        <div class="temperature-display">
+                            <h1 id="temp">--°C</h1>
+                            <p id="description">--</p>
+                        </div>
+                    </div>
+                    
+                    <div class="weather-details">
+                        <div class="detail-item">
+                            <i class="fas fa-tint"></i>
+                            <div class="detail-info">
+                                <p class="detail-label">Humidity</p>
+                                <p class="detail-value" id="humidity">--%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="forecast-section">
+                    <h3>5-Day Forecast</h3>
+                    <div class="week">
+                    </div>
+                </div>
+            </div>
+            
+            <footer class="app-footer">
+                <p>Data provided by OpenWeatherMap</p>
+            </footer>
+        </div>
     </div>
-    <div class="forecast">
-      <h3>Weekly Forecast</h3>
-      <div class="week"></div>
-    </div>
-  </div>
-  <script src="app.js"></script>
+
+    <script src="app.js"></script>
 </body>
 </html>
